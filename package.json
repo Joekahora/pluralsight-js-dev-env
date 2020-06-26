@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
-    "prestart": "node buildScripts/startMessage.js",
-    "start": "node buildScripts/srcServer.js",
-    "open:src": "node buildScripts/srcServer.js",
-    "localtunnel": "lt -h 'http:\//serveless.social' -p 3000",
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "localtunnel": "lt -h http:\//serveless.social -p 3000",
     "share": "npm-run-all --parallel open:src localtunnel"
   },
   "author": "Cory House",
