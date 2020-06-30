@@ -2,5 +2,4 @@ import "./index.css"
 import numeral from 'numeral'
 
 const courseValue = numeral(1000).format("$0,0.00")
-debugger;
-console.log(`I would like to atleast earn ${courseValue} From this job`) 
+console.log(`I would like to atleast earn ${courseValue} From this job`) //eslint-disable-line no-console
