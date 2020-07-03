@@ -1,4 +1,7 @@
 import 'whatwg-fetch'
+import getBaseUrl from './baseUrl'
+
+const baseUrl = getBaseUrl()
 
 
 export function getUsers(){
@@ -6,7 +9,7 @@ export function getUsers(){
 }
 
 function get(url){
-  return fetch(url).then(onSuccess,onError)
+  return fetch(baseUrl + url).then(onSuccess,onError)
 }
 
 function onSuccess(response){
@@ -14,5 +17,5 @@ function onSuccess(response){
 }
 
 function onError(error){
-  console.log(error) //eslint-disable-line no-console
+  console.log(error) // eslint-disable-line no-console
 }
