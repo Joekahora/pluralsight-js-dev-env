@@ -7,7 +7,7 @@ process.env.NODE_ENV = 'production'
 
 console.log(chalk.green('Generating minified bundle for production. This will take a moment ...'))
 
-webpack(webpackConfig).run((err, stats) =>{
+webpack(webpackConfigProd).run((err, stats) =>{
   if (err){
     console.log(chalk.red(err))
     return 1
