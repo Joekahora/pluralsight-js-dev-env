@@ -46,7 +46,8 @@ export default{
         minifyCSS: true,
         minifyURLs: true
       },
-      inject: true
+      inject: true,
+      trackJSToken: '11fd6d960fed4eaea1fac67025a054f7' 
     }),
 
     // eliminate duplicate plugins
